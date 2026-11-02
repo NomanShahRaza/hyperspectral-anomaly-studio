@@ -1,0 +1,429 @@
+[
+  {
+    "id": "abu-airport-1",
+    "name": "ABU · Airport 1",
+    "collection": "Airport–Beach–Urban",
+    "description": "Airport scene 1 from the 13-scene Airport–Beach–Urban collection.",
+    "source": "https://github.com/sxt1996/Airport-Beach-Urban-ABU",
+    "downloadable": true,
+    "format": "MATLAB .mat",
+    "notes": "Provider scene with its paired binary reference map. Band counts differ across scenes; dimensions are inspected when imported.",
+    "commit": "3d62937ee2b7fe1f9471605d19dd92b39a1aa6a1",
+    "files": [
+      {
+        "url": "https://raw.githubusercontent.com/sxt1996/Airport-Beach-Urban-ABU/3d62937ee2b7fe1f9471605d19dd92b39a1aa6a1/abu-airport-1.mat",
+        "git_blob": "31ba059916db708975dc3c17452e9678b76c0291",
+        "filename": "abu-airport-1.mat",
+        "size_bytes": 2735837
+      }
+    ],
+    "cube_key": "data",
+    "mask_key": "map",
+    "synthetic": false,
+    "download_bytes": 2735837,
+    "license_note": "Consult the original data provider for usage terms and attribution; no dataset license file was present in the inspected repository."
+  },
+  {
+    "id": "abu-airport-2",
+    "name": "ABU · Airport 2",
+    "collection": "Airport–Beach–Urban",
+    "description": "Airport scene 2 from the 13-scene Airport–Beach–Urban collection.",
+    "source": "https://github.com/sxt1996/Airport-Beach-Urban-ABU",
+    "downloadable": true,
+    "format": "MATLAB .mat",
+    "notes": "Provider scene with its paired binary reference map. Band counts differ across scenes; dimensions are inspected when imported.",
+    "commit": "3d62937ee2b7fe1f9471605d19dd92b39a1aa6a1",
+    "files": [
+      {
+        "url": "https://raw.githubusercontent.com/sxt1996/Airport-Beach-Urban-ABU/3d62937ee2b7fe1f9471605d19dd92b39a1aa6a1/abu-airport-2.mat",
+        "git_blob": "5f3e6e9fa310b49f25383543b400b3da0421874e",
+        "filename": "abu-airport-2.mat",
+        "size_bytes": 2802536
+      }
+    ],
+    "cube_key": "data",
+    "mask_key": "map",
+    "synthetic": false,
+    "download_bytes": 2802536,
+    "license_note": "Consult the original data provider for usage terms and attribution; no dataset license file was present in the inspected repository."
+  },
+  {
+    "id": "abu-airport-3",
+    "name": "ABU · Airport 3",
+    "collection": "Airport–Beach–Urban",
+    "description": "Airport scene 3 from the 13-scene Airport–Beach–Urban collection.",
+    "source": "https://github.com/sxt1996/Airport-Beach-Urban-ABU",
+    "downloadable": true,
+    "format": "MATLAB .mat",
+    "notes": "Provider scene with its paired binary reference map. Band counts differ across scenes; dimensions are inspected when imported.",
+    "commit": "3d62937ee2b7fe1f9471605d19dd92b39a1aa6a1",
+    "files": [
+      {
+        "url": "https://raw.githubusercontent.com/sxt1996/Airport-Beach-Urban-ABU/3d62937ee2b7fe1f9471605d19dd92b39a1aa6a1/abu-airport-3.mat",
+        "git_blob": "c8b38cfa30adbc59fe478fa78c521097b90d0b5a",
+        "filename": "abu-airport-3.mat",
+        "size_bytes": 2774082
+      }
+    ],
+    "cube_key": "data",
+    "mask_key": "map",
+    "synthetic": false,
+    "download_bytes": 2774082,
+    "license_note": "Consult the original data provider for usage terms and attribution; no dataset license file was present in the inspected repository."
+  },
+  {
+    "id": "abu-airport-4",
+    "name": "ABU · Airport 4",
+    "collection": "Airport–Beach–Urban",
+    "description": "Airport scene 4 from the 13-scene Airport–Beach–Urban collection.",
+    "source": "https://github.com/sxt1996/Airport-Beach-Urban-ABU",
+    "downloadable": true,
+    "format": "MATLAB .mat",
+    "notes": "Provider scene with its paired binary reference map. Band counts differ across scenes; dimensions are inspected when imported.",
+    "commit": "3d62937ee2b7fe1f9471605d19dd92b39a1aa6a1",
+    "files": [
+      {
+        "url": "https://raw.githubusercontent.com/sxt1996/Airport-Beach-Urban-ABU/3d62937ee2b7fe1f9471605d19dd92b39a1aa6a1/abu-airport-4.mat",
+        "git_blob": "6f62cb5c912e304c7250d9c69e9dc041f1b4a745",
+        "filename": "abu-airport-4.mat",
+        "size_bytes": 2570267
+      }
+    ],
+    "cube_key": "data",
+    "mask_key": "map",
+    "synthetic": false,
+    "download_bytes": 2570267,
+    "license_note": "Consult the original data provider for usage terms and attribution; no dataset license file was present in the inspected repository."
+  },
+  {
+    "id": "abu-beach-1",
+    "name": "ABU · Beach 1",
+    "collection": "Airport–Beach–Urban",
+    "description": "Beach scene 1 from the 13-scene Airport–Beach–Urban collection.",
+    "source": "https://github.com/sxt1996/Airport-Beach-Urban-ABU",
+    "downloadable": true,
+    "format": "MATLAB .mat",
+    "notes": "Provider scene with its paired binary reference map. Band counts differ across scenes; dimensions are inspected when imported.",
+    "commit": "3d62937ee2b7fe1f9471605d19dd92b39a1aa6a1",
+    "files": [
+      {
+        "url": "https://raw.githubusercontent.com/sxt1996/Airport-Beach-Urban-ABU/3d62937ee2b7fe1f9471605d19dd92b39a1aa6a1/abu-beach-1.mat",
+        "git_blob": "ae54898d6e6d90ead2c772eabf78af7c457fc937",
+        "filename": "abu-beach-1.mat",
+        "size_bytes": 3770218
+      }
+    ],
+    "cube_key": "data",
+    "mask_key": "map",
+    "synthetic": false,
+    "download_bytes": 3770218,
+    "license_note": "Consult the original data provider for usage terms and attribution; no dataset license file was present in the inspected repository."
+  },
+  {
+    "id": "abu-beach-2",
+    "name": "ABU · Beach 2",
+    "collection": "Airport–Beach–Urban",
+    "description": "Beach scene 2 from the 13-scene Airport–Beach–Urban collection.",
+    "source": "https://github.com/sxt1996/Airport-Beach-Urban-ABU",
+    "downloadable": true,
+    "format": "MATLAB .mat",
+    "notes": "Provider scene with its paired binary reference map. Band counts differ across scenes; dimensions are inspected when imported.",
+    "commit": "3d62937ee2b7fe1f9471605d19dd92b39a1aa6a1",
+    "files": [
+      {
+        "url": "https://raw.githubusercontent.com/sxt1996/Airport-Beach-Urban-ABU/3d62937ee2b7fe1f9471605d19dd92b39a1aa6a1/abu-beach-2.mat",
+        "git_blob": "aabbda9df390ce3fe866f51ef2d13bbe413f6987",
+        "filename": "abu-beach-2.mat",
+        "size_bytes": 1562254
+      }
+    ],
+    "cube_key": "data",
+    "mask_key": "map",
+    "synthetic": false,
+    "download_bytes": 1562254,
+    "license_note": "Consult the original data provider for usage terms and attribution; no dataset license file was present in the inspected repository."
+  },
+  {
+    "id": "abu-beach-3",
+    "name": "ABU · Beach 3",
+    "collection": "Airport–Beach–Urban",
+    "description": "Beach scene 3 from the 13-scene Airport–Beach–Urban collection.",
+    "source": "https://github.com/sxt1996/Airport-Beach-Urban-ABU",
+    "downloadable": true,
+    "format": "MATLAB .mat",
+    "notes": "Provider scene with its paired binary reference map. Band counts differ across scenes; dimensions are inspected when imported.",
+    "commit": "3d62937ee2b7fe1f9471605d19dd92b39a1aa6a1",
+    "files": [
+      {
+        "url": "https://raw.githubusercontent.com/sxt1996/Airport-Beach-Urban-ABU/3d62937ee2b7fe1f9471605d19dd92b39a1aa6a1/abu-beach-3.mat",
+        "git_blob": "134537f603a080fbbbee6388c8d9f855b3e0286f",
+        "filename": "abu-beach-3.mat",
+        "size_bytes": 2427882
+      }
+    ],
+    "cube_key": "data",
+    "mask_key": "map",
+    "synthetic": false,
+    "download_bytes": 2427882,
+    "license_note": "Consult the original data provider for usage terms and attribution; no dataset license file was present in the inspected repository."
+  },
+  {
+    "id": "abu-beach-4",
+    "name": "ABU · Beach 4",
+    "collection": "Airport–Beach–Urban",
+    "description": "Beach scene 4 from the 13-scene Airport–Beach–Urban collection.",
+    "source": "https://github.com/sxt1996/Airport-Beach-Urban-ABU",
+    "downloadable": true,
+    "format": "MATLAB .mat",
+    "notes": "Provider scene with its paired binary reference map. Band counts differ across scenes; dimensions are inspected when imported.",
+    "commit": "3d62937ee2b7fe1f9471605d19dd92b39a1aa6a1",
+    "files": [
+      {
+        "url": "https://raw.githubusercontent.com/sxt1996/Airport-Beach-Urban-ABU/3d62937ee2b7fe1f9471605d19dd92b39a1aa6a1/abu-beach-4.mat",
+        "git_blob": "2d429da18c7d7aae0ccdda2bc55a91c9f0c9e5c0",
+        "filename": "abu-beach-4.mat",
+        "size_bytes": 8619619
+      }
+    ],
+    "cube_key": "data",
+    "mask_key": "map",
+    "synthetic": false,
+    "download_bytes": 8619619,
+    "license_note": "Consult the original data provider for usage terms and attribution; no dataset license file was present in the inspected repository."
+  },
+  {
+    "id": "abu-urban-1",
+    "name": "ABU · Urban 1",
+    "collection": "Airport–Beach–Urban",
+    "description": "Urban scene 1 from the 13-scene Airport–Beach–Urban collection.",
+    "source": "https://github.com/sxt1996/Airport-Beach-Urban-ABU",
+    "downloadable": true,
+    "format": "MATLAB .mat",
+    "notes": "Provider scene with its paired binary reference map. Band counts differ across scenes; dimensions are inspected when imported.",
+    "commit": "3d62937ee2b7fe1f9471605d19dd92b39a1aa6a1",
+    "files": [
+      {
+        "url": "https://raw.githubusercontent.com/sxt1996/Airport-Beach-Urban-ABU/3d62937ee2b7fe1f9471605d19dd92b39a1aa6a1/abu-urban-1.mat",
+        "git_blob": "902e8c447e2a58e00d0ef6969e0f28dccc43b5d0",
+        "filename": "abu-urban-1.mat",
+        "size_bytes": 2666116
+      }
+    ],
+    "cube_key": "data",
+    "mask_key": "map",
+    "synthetic": false,
+    "download_bytes": 2666116,
+    "license_note": "Consult the original data provider for usage terms and attribution; no dataset license file was present in the inspected repository."
+  },
+  {
+    "id": "abu-urban-2",
+    "name": "ABU · Urban 2",
+    "collection": "Airport–Beach–Urban",
+    "description": "Urban scene 2 from the 13-scene Airport–Beach–Urban collection.",
+    "source": "https://github.com/sxt1996/Airport-Beach-Urban-ABU",
+    "downloadable": true,
+    "format": "MATLAB .mat",
+    "notes": "Provider scene with its paired binary reference map. Band counts differ across scenes; dimensions are inspected when imported.",
+    "commit": "3d62937ee2b7fe1f9471605d19dd92b39a1aa6a1",
+    "files": [
+      {
+        "url": "https://raw.githubusercontent.com/sxt1996/Airport-Beach-Urban-ABU/3d62937ee2b7fe1f9471605d19dd92b39a1aa6a1/abu-urban-2.mat",
+        "git_blob": "827a52ad6847b29ed2851d07fca7b207b400b6b6",
+        "filename": "abu-urban-2.mat",
+        "size_bytes": 2678487
+      }
+    ],
+    "cube_key": "data",
+    "mask_key": "map",
+    "synthetic": false,
+    "download_bytes": 2678487,
+    "license_note": "Consult the original data provider for usage terms and attribution; no dataset license file was present in the inspected repository."
+  },
+  {
+    "id": "abu-urban-3",
+    "name": "ABU · Urban 3",
+    "collection": "Airport–Beach–Urban",
+    "description": "Urban scene 3 from the 13-scene Airport–Beach–Urban collection.",
+    "source": "https://github.com/sxt1996/Airport-Beach-Urban-ABU",
+    "downloadable": true,
+    "format": "MATLAB .mat",
+    "notes": "Provider scene with its paired binary reference map. Band counts differ across scenes; dimensions are inspected when imported.",
+    "commit": "3d62937ee2b7fe1f9471605d19dd92b39a1aa6a1",
+    "files": [
+      {
+        "url": "https://raw.githubusercontent.com/sxt1996/Airport-Beach-Urban-ABU/3d62937ee2b7fe1f9471605d19dd92b39a1aa6a1/abu-urban-3.mat",
+        "git_blob": "a2c70f8a9140946246c177196c159b55d82a0dca",
+        "filename": "abu-urban-3.mat",
+        "size_bytes": 2262918
+      }
+    ],
+    "cube_key": "data",
+    "mask_key": "map",
+    "synthetic": false,
+    "download_bytes": 2262918,
+    "license_note": "Consult the original data provider for usage terms and attribution; no dataset license file was present in the inspected repository."
+  },
+  {
+    "id": "abu-urban-4",
+    "name": "ABU · Urban 4",
+    "collection": "Airport–Beach–Urban",
+    "description": "Urban scene 4 from the 13-scene Airport–Beach–Urban collection.",
+    "source": "https://github.com/sxt1996/Airport-Beach-Urban-ABU",
+    "downloadable": true,
+    "format": "MATLAB .mat",
+    "notes": "Provider scene with its paired binary reference map. Band counts differ across scenes; dimensions are inspected when imported.",
+    "commit": "3d62937ee2b7fe1f9471605d19dd92b39a1aa6a1",
+    "files": [
+      {
+        "url": "https://raw.githubusercontent.com/sxt1996/Airport-Beach-Urban-ABU/3d62937ee2b7fe1f9471605d19dd92b39a1aa6a1/abu-urban-4.mat",
+        "git_blob": "51df58a11fcc8805e3fc26c571c55fdf62abb730",
+        "filename": "abu-urban-4.mat",
+        "size_bytes": 2837140
+      }
+    ],
+    "cube_key": "data",
+    "mask_key": "map",
+    "synthetic": false,
+    "download_bytes": 2837140,
+    "license_note": "Consult the original data provider for usage terms and attribution; no dataset license file was present in the inspected repository."
+  },
+  {
+    "id": "abu-urban-5",
+    "name": "ABU · Urban 5",
+    "collection": "Airport–Beach–Urban",
+    "description": "Urban scene 5 from the 13-scene Airport–Beach–Urban collection.",
+    "source": "https://github.com/sxt1996/Airport-Beach-Urban-ABU",
+    "downloadable": true,
+    "format": "MATLAB .mat",
+    "notes": "Provider scene with its paired binary reference map. Band counts differ across scenes; dimensions are inspected when imported.",
+    "commit": "3d62937ee2b7fe1f9471605d19dd92b39a1aa6a1",
+    "files": [
+      {
+        "url": "https://raw.githubusercontent.com/sxt1996/Airport-Beach-Urban-ABU/3d62937ee2b7fe1f9471605d19dd92b39a1aa6a1/abu-urban-5.mat",
+        "git_blob": "2924424ff779f881340ae8c31bbfbd9f5cb676a6",
+        "filename": "abu-urban-5.mat",
+        "size_bytes": 2809140
+      }
+    ],
+    "cube_key": "data",
+    "mask_key": "map",
+    "synthetic": false,
+    "download_bytes": 2809140,
+    "license_note": "Consult the original data provider for usage terms and attribution; no dataset license file was present in the inspected repository."
+  },
+  {
+    "id": "hydice-urban",
+    "name": "HYDICE · Urban",
+    "collection": "HYDICE",
+    "description": "Urban hyperspectral anomaly scene from the HYDICE research collection.",
+    "source": "https://github.com/sxt1996/HYDICE",
+    "downloadable": true,
+    "format": "MATLAB .mat",
+    "notes": "80 × 100 pixels, 175 bands, with the provider reference mask.",
+    "commit": "ad68997b9f3d95bc507d9a7fef5baa07795b1ba5",
+    "files": [
+      {
+        "url": "https://raw.githubusercontent.com/sxt1996/HYDICE/ad68997b9f3d95bc507d9a7fef5baa07795b1ba5/HYDICE-urban.mat",
+        "git_blob": "1c22886bbb3ccb440a4811ffee94107a66b8554c",
+        "filename": "HYDICE-urban.mat",
+        "size_bytes": 2544597
+      }
+    ],
+    "cube_key": "data",
+    "mask_key": "map",
+    "synthetic": false,
+    "download_bytes": 2544597,
+    "license_note": "Consult the original data provider for usage terms and attribution; no dataset license file was present in the inspected repository."
+  },
+  {
+    "id": "aviris-i",
+    "name": "AVIRIS-I · San Diego",
+    "collection": "AVIRIS",
+    "description": "Aircraft-anomaly example used in the PAB-DC author demonstration.",
+    "source": "https://github.com/huyanning/Hyperspectral-Anomaly-Detection",
+    "downloadable": true,
+    "format": "MATLAB .mat",
+    "notes": "100 × 100 top-left crop of the 400 × 400 original, aligned with PlaneGT as in the author demo. All 224 source bands are retained; the author example removes zero-based bands 0–5, 32–34, 93–96, 106–112, 152–165, 220–223. AVIRIS-I is a catalogue label.",
+    "commit": "601b0b38feb85fcf4235b7b0d18a1ff5cef47c3f",
+    "files": [
+      {
+        "url": "https://raw.githubusercontent.com/huyanning/Hyperspectral-Anomaly-Detection/601b0b38feb85fcf4235b7b0d18a1ff5cef47c3f/Sandiego.mat",
+        "git_blob": "0559ff9e2940a9e12f7a8395f2e0a20b2a2e6276",
+        "filename": "Sandiego.mat",
+        "size_bytes": 51233801
+      },
+      {
+        "url": "https://raw.githubusercontent.com/huyanning/Hyperspectral-Anomaly-Detection/601b0b38feb85fcf4235b7b0d18a1ff5cef47c3f/PlaneGT.mat",
+        "git_blob": "b9c6212f13ee532ae672392643a0ae16d5c8f30a",
+        "filename": "PlaneGT.mat",
+        "size_bytes": 290
+      }
+    ],
+    "cube_key": "Sandiego",
+    "mask_key": "PlaneGT",
+    "synthetic": false,
+    "download_bytes": 51234091,
+    "license_note": "Consult the original data provider for usage terms and attribution; no dataset license file was present in the inspected repository.",
+    "crop": [
+      0,
+      100,
+      0,
+      100
+    ],
+    "recommended_remove_bands": "0-5, 32-34, 93-96, 106-112, 152-165, 220-223"
+  },
+  {
+    "id": "aviris-ii",
+    "name": "AVIRIS-II · AED San Diego",
+    "collection": "AVIRIS",
+    "description": "San Diego anomaly example supplied with the AED implementation.",
+    "source": "https://github.com/yousefan/AED-algorithm",
+    "downloadable": true,
+    "format": "MATLAB .mat",
+    "notes": "100 × 100 pixels and 189 bands, as distributed with AED. AVIRIS-II is a catalogue label, not an official AVIRIS sensor generation.",
+    "commit": "d3b7844ab545188dc0dcbe586a4dfe078cf602f2",
+    "files": [
+      {
+        "url": "https://raw.githubusercontent.com/yousefan/AED-algorithm/d3b7844ab545188dc0dcbe586a4dfe078cf602f2/Data/San_Diego.mat",
+        "git_blob": "49553cd893f41c017e60439c13a2668f58c24d23",
+        "filename": "Data/San_Diego.mat",
+        "size_bytes": 2945758
+      }
+    ],
+    "cube_key": "data",
+    "mask_key": "map",
+    "synthetic": false,
+    "download_bytes": 2945758,
+    "license_note": "Consult the original data provider for usage terms and attribution; no dataset license file was present in the inspected repository."
+  },
+  {
+    "id": "salinas-synthetic",
+    "name": "Salinas · Synthetic anomalies",
+    "collection": "Salinas",
+    "description": "Author-created synthetic anomaly benchmark based on Salinas imagery.",
+    "source": "https://github.com/zephyrhours/Hyperspectral-Anomaly-Detection-LSUNRSORAD-and-LSAD-CR-IDW-",
+    "downloadable": true,
+    "format": "MATLAB .mat",
+    "notes": "120 × 120 pixels, 204 bands. This is the author synthetic anomaly example, not the unmodified Salinas classification scene.",
+    "commit": "424bfbee3ce822941882d54297f2d906a75e5d54",
+    "files": [
+      {
+        "url": "https://raw.githubusercontent.com/zephyrhours/Hyperspectral-Anomaly-Detection-LSUNRSORAD-and-LSAD-CR-IDW-/424bfbee3ce822941882d54297f2d906a75e5d54/Salians_syn.mat",
+        "git_blob": "e130151c14aabb8f320f685b231829ea83575ed2",
+        "filename": "Salians_syn.mat",
+        "size_bytes": 4483201
+      },
+      {
+        "url": "https://raw.githubusercontent.com/zephyrhours/Hyperspectral-Anomaly-Detection-LSUNRSORAD-and-LSAD-CR-IDW-/424bfbee3ce822941882d54297f2d906a75e5d54/Salians_syn_gt.mat",
+        "git_blob": "5e023ebbd8b5f4b5234b7a9eb73691723de1e503",
+        "filename": "Salians_syn_gt.mat",
+        "size_bytes": 319
+      }
+    ],
+    "cube_key": "hsi",
+    "mask_key": "hsi_gt",
+    "synthetic": true,
+    "download_bytes": 4483520,
+    "license_note": "Consult the original data provider for usage terms and attribution; no dataset license file was present in the inspected repository."
+  }
+]

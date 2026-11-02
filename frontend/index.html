@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HAD Studio · Hyperspectral anomaly workbench</title>
+  <meta name="theme-color" content="#081018" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="64x64" href="/assets/favicon-64.png" />
+  <link rel="apple-touch-icon" href="/assets/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/app.css?v=21" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+</head>
+<body>
+  <aside class="sidebar">
+    <a class="brand" href="#workspace">
+      <img class="mark-img" src="/assets/logo.png" alt="HAD Studio" />
+      <span>HAD<span class="light">Studio</span><small>HYPERSPECTRAL INTELLIGENCE</small></span>
+    </a>
+    <div class="nav-label">Research Workbench</div>
+    <nav>
+      <button class="nav-item active" data-view="workspace">Analysis workspace</button>
+      <button class="nav-item" data-view="datasets">Datasets <span class="nav-count" id="navDataCount">5</span></button>
+      <button class="nav-item" data-view="models">Model registry <span class="nav-count" id="navModelCount">22</span></button>
+      <button class="nav-item" data-view="experiments">Experiments</button>
+    </nav>
+    <div class="sidebar-note">
+      <span class="tiny">FROM SPECTRA TO SIGNAL</span>
+      <p>A consistent workflow.<br>Every experiment traceable.</p>
+      <div class="spectral-strip"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    </div>
+    <div class="sidebar-footer">
+      <span class="dot connected"></span>
+      <div><strong>Local engine</strong><small>hadstudio · port 8765</small></div>
+    </div>
+  </aside>
+
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="crumb">Research Workbench <span>/</span> <b id="crumbCurrent">Analysis workspace</b></div>
+      <div class="topbar-right"><span class="local">Local execution</span><img class="avatar" src="/assets/logo.png" alt="HAD" /></div>
+    </header>
+
+    <main>
+      <section id="view-workspace" class="view active">
+        <div class="page-heading">
+          <div>
+            <div class="eyebrow">SPECTRAL ANALYSIS</div>
+            <h1>Anomaly workspace</h1>
+            <p>Explore your scene. Refine the pipeline. Find the unexpected.</p>
+          </div>
+          <div class="heading-actions">
+            <button class="btn hidden" type="button" id="clearBtn">Clear all</button>
+            <button class="btn" type="button" id="importBtn">Import dataset</button>
+          </div>
+        </div>
+
+        <div class="dataset-bar">
+          <div>
+            <div class="bar-title" id="sessionName">No scene loaded</div>
+            <div class="bar-meta" id="sessionMeta">Start with a scene to begin</div>
+          </div>
+          <div class="bar-actions">
+            <select id="datasetSelect" aria-label="Active dataset">
+              <option value="">Select a dataset</option>
+            </select>
+            <button class="text-btn" type="button" id="demoBtn">Load demo scene</button>
+          </div>
+        </div>
+
+        <div class="workbench">
+          <div class="analysis">
+            <div class="visual-grid">
+              <article class="card">
+                <div class="card-head"><span class="num">01</span><h2>Scene explorer</h2><span class="tag">INPUT CUBE</span></div>
+                <div class="seg" id="sceneModes">
+                  <button data-view="rgb" class="active">False color</button>
+                  <button data-view="gt">Ground truth</button>
+                </div>
+                <div class="viewport" id="sceneViewport">
+                  <img id="sceneImage" class="hidden" alt="" />
+                  <div id="emptyState" class="empty">
+                    <h3>Your scene, in every wavelength</h3>
+                    <p>Import a hyperspectral cube or explore the included synthetic scene.</p>
+                    <button class="btn small" type="button" id="emptyDemo">Load demo scene</button>
+                  </div>
+                </div>
+                <div class="card-foot"><span id="sceneFoot">No scene loaded</span><span>Scroll to zoom · drag to pan</span></div>
+              </article>
+
+              <article class="card">
+                <div class="card-head"><span class="num">02</span><h2>Anomaly response</h2><span class="pill" id="resultStatus">Awaiting analysis</span></div>
+                <div class="seg" id="resultModes">
+                  <button data-view="heatmap" class="active">Heatmap</button>
+                  <button data-view="overlay">Overlay</button>
+                  <button data-view="binary">Binary</button>
+                </div>
+                <div class="viewport" id="resultViewport">
+                  <img id="resultImage" class="hidden" alt="" />
+                  <div id="resultEmpty" class="empty">
+                    <h3>Find what stands out</h3>
+                    <p>Choose a detector and run the pipeline.</p>
+                    <div class="pipe">Preprocess <span>›</span> Transform <span>›</span> Detect</div>
+                  </div>
+                </div>
+                <div class="card-foot" id="resultFootRow">
+                  <span id="resultFoot">Higher score = more anomalous</span>
+                  <span class="legend" id="resultLegend"><i></i> Low → High</span>
+                </div>
+                <div id="thresholdBox" class="threshold-box hidden">
+                  <label>Threshold <span id="thresholdLabel">99.00th percentile</span></label>
+                  <input id="threshold" type="range" min="0" max="100" step="0.01" value="99" disabled />
+                  <span id="thresholdInfo">Adjust the percentile to inspect overlay detections.</span>
+                </div>
+              </article>
+            </div>
+
+            <div class="metrics">
+              <article><span>ROC AUC</span><strong id="aucValue">—</strong><small id="aucNote">Requires reference mask</small></article>
+              <article><span>Runtime</span><strong id="timeValue">—</strong><small>Detector wall time</small></article>
+              <article><span>Detector</span><strong id="detValue">—</strong><small>Last completed run</small></article>
+              <article><span>Pixel</span><strong id="pixelReadout">—</strong><small>Click either viewer</small></article>
+            </div>
+
+            <article class="card inspector">
+              <div class="tabs">
+                <button class="active" data-tab="spectrum">Spectral signature</button>
+                <button data-tab="roc">ROC curve</button>
+              </div>
+              <div class="tab-body">
+                <canvas id="specChart" height="140"></canvas>
+                <canvas id="rocChart" height="140" class="is-off"></canvas>
+              </div>
+            </article>
+          </div>
+
+          <aside class="pipeline">
+            <article class="card">
+              <div class="pipe-head"><div class="eyebrow">CONFIGURATION</div><h2>Analysis pipeline</h2></div>
+              <section>
+                <div class="step"><span>1</span><h3>Preprocessing</h3></div>
+                <label>Normalization
+                  <select id="prepMethod">
+                    <option value="none" selected>None</option>
+                    <option value="minmax">Min–max</option>
+                    <option value="zscore">Z-score</option>
+                    <option value="l2">Per-pixel L2</option>
+                    <option value="snv">SNV</option>
+                  </select>
+                </label>
+                <label>Exclude bands <span class="optional">optional</span>
+                  <input id="removeBands" type="text" placeholder="e.g. 0-4, 105-115" autocomplete="off" />
+                </label>
+                <p class="hint">Zero-based indices. Ranges are inclusive.</p>
+                <label>Crop <span class="optional">optional</span>
+                  <input id="cropWindow" type="text" placeholder="e.g. 0-99, 0-99" autocomplete="off" />
+                </label>
+                <p class="hint">Rows, columns. Zero-based inclusive ranges.</p>
+                <div id="prepExtras" class="hidden">
+                  <label>Spatial median
+                    <input id="medianSize" type="number" min="0" max="9" step="2" value="0" />
+                  </label>
+                </div>
+              </section>
+              <section>
+                <div class="step"><span>2</span><h3>Dimensionality reduction</h3></div>
+                <select id="drMethod">
+                  <option value="none" selected>None · all bands</option>
+                  <option value="pca">PCA</option>
+                  <option value="ica">ICA</option>
+                  <option value="svd">SVD</option>
+                  <option value="factor_analysis">Factor analysis</option>
+                  <option value="isomap">Isomap</option>
+                </select>
+                <div id="drExtras" class="hidden">
+                  <p id="drHint" class="hint">Project the cube onto principal components.</p>
+                  <label>Components
+                    <input id="nComp" type="number" min="2" max="40" value="10" />
+                  </label>
+                </div>
+              </section>
+              <section>
+                <div class="step"><span>3</span><h3>Anomaly detector</h3></div>
+                <label>Family <select id="familySelect"></select></label>
+                <label>Algorithm <select id="detectorSelect"></select></label>
+                <p id="detectorMeta" class="hint"></p>
+                <div id="paramBox" class="params"></div>
+                <p id="paramNote" class="hint param-note hidden"></p>
+              </section>
+              <div class="pipe-run">
+                <button class="btn primary block" type="button" id="runBtn2">Run analysis</button>
+                <p id="runHelp">Load a dataset to start an experiment.</p>
+              </div>
+            </article>
+          </aside>
+        </div>
+      </section>
+
+      <section id="view-datasets" class="view hidden">
+        <div class="page-heading">
+          <div>
+            <div class="eyebrow">DATA LIBRARY</div>
+            <h1>Datasets</h1>
+            <p>Your local scenes and the research collections behind the catalogue.</p>
+          </div>
+          <div class="heading-actions">
+            <button class="btn hidden" type="button" id="clearBtn2">Clear all</button>
+            <button class="btn" type="button" id="demoBtn2">Load demo</button>
+            <button class="btn primary" type="button" id="importBtn2">Import dataset</button>
+          </div>
+        </div>
+        <div class="section-heading">
+          <h2>Loaded scenes <span class="count-badge" id="loadedCount">0</span></h2>
+          <span class="muted">Available to every experiment</span>
+        </div>
+        <div id="loadedDatasets" class="loaded-grid"></div>
+        <div class="section-heading catalog-heading">
+          <div>
+            <h2>Research catalogue</h2>
+            <p>Original provider repositories, with clear dataset provenance.</p>
+          </div>
+          <div class="search-input"><input id="datasetSearch" type="search" placeholder="Search collections…" /></div>
+        </div>
+        <div id="datasetCatalog" class="catalog-grid"></div>
+        <p class="catalog-footnote">AVIRIS-I and AVIRIS-II are catalogue labels. The Salinas entry is a synthetic anomaly example. Follow each provider’s licensing and citation guidance.</p>
+      </section>
+
+      <section id="view-models" class="view hidden">
+        <div class="page-heading">
+          <div>
+            <div class="eyebrow">DETECTION METHODS</div>
+            <h1>Model registry</h1>
+            <p>Inspect each method, its implementation, paper, and original source.</p>
+          </div>
+        </div>
+        <div id="registrySummary" class="registry-summary"></div>
+        <div class="registry-toolbar">
+          <div class="search-input"><input id="modelSearch" type="search" placeholder="Search detectors…" /></div>
+          <select id="modelFamilyFilter"><option value="all">All method families</option></select>
+          <label class="check"><input id="readyOnly" type="checkbox" /> Ready to run only</label>
+          <span class="filter-count" id="modelFilterCount"></span>
+        </div>
+        <div id="modelRegistry" class="model-grid"></div>
+      </section>
+
+      <section id="view-experiments" class="view hidden">
+        <div class="page-heading">
+          <div>
+            <div class="eyebrow">REPRODUCIBLE RESEARCH</div>
+            <h1>Experiments</h1>
+            <p>The 20 most recent detection runs, with the dataset used for each.</p>
+          </div>
+        </div>
+        <article class="card">
+          <div id="compare"></div>
+        </article>
+      </section>
+    </main>
+    <footer class="app-footer">
+      <span>HAD Studio<span class="dot-sep">·</span>Hyperspectral anomaly workbench</span>
+      <span>Inference only · research results need independent validation</span>
+    </footer>
+  </div>
+
+  <dialog id="modelDialog" class="modal">
+    <div class="modal-head">
+      <div><div class="eyebrow" id="modelDetailFamily"></div><h2 id="modelDetailTitle"></h2></div>
+      <button type="button" class="btn" id="closeModel">Close</button>
+    </div>
+    <div class="modal-body" id="modelDetailBody"></div>
+    <div class="modal-foot">
+      <span id="modelDetailSource"></span>
+      <button type="button" class="btn primary" id="useModelBtn">Use in pipeline</button>
+    </div>
+  </dialog>
+
+  <div id="pageBusy" class="page-busy hidden"><div class="spinner"></div><p id="busyText">Working…</p></div>
+
+  <dialog id="uploadDialog" class="modal">
+    <form id="uploadForm">
+      <div class="modal-head">
+        <div><div class="eyebrow">ADD A SCENE</div><h2>Import hyperspectral data</h2></div>
+        <button type="button" class="btn" id="closeUpload">Close</button>
+      </div>
+      <div class="modal-body">
+        <label>Cube
+          <input id="cubeFile" type="file" accept=".mat,.npy,.npz,.tif,.tiff,.hdr,.img,.dat" required />
+        </label>
+        <label>Ground truth
+          <input id="gtFile" type="file" accept=".mat,.npy,.npz,.tif,.tiff" />
+        </label>
+      </div>
+      <div class="modal-foot">
+        <span>Data stays on this machine.</span>
+        <button type="submit" class="btn primary">Import scene</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="/assets/app.js?v=30"></script>
+</body>
+</html>
